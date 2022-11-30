@@ -9,9 +9,6 @@ import {
   StyledUsername,
 } from "../../styles/Home.styled";
 
-// fallback image import
-import fallbackImg from "../../assets/user img/fallback.png";
-
 function ListMember({ friendInfo, loading, setChatingWith, setShowOffCanvas }) {
   return (
     <ListGroup.Item className="bg-transparent text-white border-brand px-0">
@@ -40,9 +37,6 @@ function ListMember({ friendInfo, loading, setChatingWith, setShowOffCanvas }) {
               height={50}
               className="mb-0 rounded-circle bg-secondary bg-opacity-50 object-fit-contain"
               loading="lazy"
-              onError={({ target }) => {
-                target.src = { fallbackImg };
-              }}
             />
             <div className="d-flex align-items-center justify-content-between flex-grow-1 ms-3">
               <StyledUsername

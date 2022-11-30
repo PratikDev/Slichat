@@ -14,9 +14,6 @@ import ListMember from "./ListMember.comp";
 import { collection, getDocs, limit, query, where } from "firebase/firestore";
 import { db } from "../../firebase/firebase_init";
 
-// fallback image import
-import fallbackImg from "../../assets/user img/fallback.png";
-
 function Left({ offcanvas, currentUser, setChatingWith, setShowOffCanvas }) {
   // sign out button display state
   const [signOutButtonDisplay, setSignOutButtonDisplay] = useState(false);
@@ -66,10 +63,6 @@ function Left({ offcanvas, currentUser, setChatingWith, setShowOffCanvas }) {
             alt={currentUser?.displayName}
             className="rounded-circle bg-secondary"
             loading="lazy"
-            onError={({ target }) => {
-              console.log(true);
-              target.src = { fallbackImg };
-            }}
           />
           <div
             className="position-relative"

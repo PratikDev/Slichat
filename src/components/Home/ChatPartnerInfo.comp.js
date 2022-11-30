@@ -1,6 +1,3 @@
-// fallback image import
-import fallbackImg from "../../assets/user img/fallback.png";
-
 function ChatPartnerInfo({ partner: { photoURL, displayName, email } }) {
   return (
     <>
@@ -10,9 +7,6 @@ function ChatPartnerInfo({ partner: { photoURL, displayName, email } }) {
         width={25}
         height={25}
         className="rounded-circle bg-secondary bg-opacity-50 object-fit-contain"
-        onError={({ target }) => {
-          target.src = { fallbackImg };
-        }}
       />
       <div className="partner-info flex-grow-1 d-flex align-items-center justify-content-between ms-3">
         <p className="m-0 fw-semibold" title={email || "Unknown Email"}>
