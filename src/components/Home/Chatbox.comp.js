@@ -158,7 +158,7 @@ function ChatBox({ partner: { uid: partnerUID, displayName, email }, myuid }) {
       <div className={`mb-4${variant === `in` ? `` : ` text-end`}`}>
         <StyleMessage
           variant={variant}
-          className={`d-inline-block text-start px-4 py-3 rounded position-relative ${
+          className={`d-inline-block text-start px-4 py-3 rounded-pill position-relative ${
             variant === `in` ? `ms-3 ms-md-4` : `me-3 me-md-4`
           }`}
           title={`${date}, ${time}`}
@@ -220,7 +220,7 @@ function ChatBox({ partner: { uid: partnerUID, displayName, email }, myuid }) {
           onClick={goDown}
           style={{
             transform: `translateY(${goDownShow ? `-50px` : 0})`,
-            transition: 300,
+            transition: `300ms`,
             right: 10,
           }}
         >

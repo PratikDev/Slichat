@@ -1,10 +1,6 @@
 // styled components imports
 import styled from "styled-components";
 
-// image imports
-import msg_in_tail_out from "../assets/msg-in-tail-out.svg";
-import msg_out_tail_out from "../assets/msg-out-tail-out.svg";
-
 // component imports
 import ListGroup from "react-bootstrap/ListGroup";
 import Form from "react-bootstrap/Form";
@@ -57,16 +53,8 @@ const StyleMessage = styled.div`
   background-color: ${({ variant }) =>
     variant === `in` ? `#8F88FE` : `var(--brand)`};
 
-  &::before {
-    content: ${({ variant }) =>
-      `url(${variant === `in` ? msg_in_tail_out : msg_out_tail_out})`};
-
-    ${({ variant }) => (variant === `in` ? `left` : `right`)}: -14px;
-
-    position: absolute;
-    bottom: -7px;
-    z-index: -1;
-  }
+  border-bottom-${({ variant }) =>
+    variant === `in` ? `left` : `right`}-radius: 0px !important;
 
   @media screen and (max-width: 768px) {
     font-size: 13px;
