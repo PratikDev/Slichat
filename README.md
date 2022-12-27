@@ -11,6 +11,7 @@ Slichat is a chat app where you can chat with your friends (if you can convince 
 - [Styled Components](https://styled-components.com/)
 - [React Boostrap](https://react-bootstrap.github.io/)
 - [React Infinite Scroller](https://github.com/danbovey/react-infinite-scroller)
+- [React Router Dom](https://reactrouter.com/en/main)
 
 ## Features
 
